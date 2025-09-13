@@ -10,6 +10,7 @@ namespace Pukikaki
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Хеллоу, май френд фром земля!");
         }
     }
 }
