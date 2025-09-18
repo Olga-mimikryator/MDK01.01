@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace TestArray
 {
@@ -29,6 +30,21 @@ namespace TestArray
             Console.WriteLine(twoArray[0]);
             Console.WriteLine(twoArray[1]);
             Console.WriteLine(twoArray[2]);
+
+            int[] megaArray = new int[10000];
+            for (int a=0; a < megaArray.Length; a++)
+            {
+                megaArray[a] = a+1;
+                
+            }
+
+            Console.Write("[");
+            for (int i=0; i < megaArray.Length-1; i++)
+            {
+                Console.Write(megaArray[i] + ",");
+            }
+            Console.Write(megaArray[megaArray.Length-1] + "]");
+
         }
     }
 }
