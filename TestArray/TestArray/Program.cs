@@ -38,12 +38,21 @@ namespace TestArray
                 
             }
 
+            for (int b = 0; b < megaArray.Length; b++)
+            {
+                megaArray[b] = (b+1) * 2;
+            }
+
             Console.Write("[");
             for (int i=0; i < megaArray.Length-1; i++)
             {
                 Console.Write(megaArray[i] + ",");
             }
             Console.Write(megaArray[megaArray.Length-1] + "]");
+
+
+            
+
 
         }
     }
