@@ -10,6 +10,10 @@ namespace TestArray
     {
         static void Main(string[] args)
         {
+            string[] array = new string[3];
+            array[0] = "Я помню чудное мгновение";
+            array[1] = "Передо мной явилась ты";
+            array[2] = "Как мимолетное видение, как гений чистой красоты";
         }
     }
 }
