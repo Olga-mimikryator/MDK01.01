@@ -43,6 +43,14 @@ namespace TestArray
                 megaArray[b] = (b+1) * 2;
             }
 
+            int h = 0;
+            for (int c = 0; c < megaArray.Length/2; c++)
+            {
+                h = megaArray[c];
+                megaArray[c] = megaArray[megaArray.Length-(1+c)];
+                megaArray[megaArray.Length - (1 + c)] = h;
+            }
+
             Console.Write("[");
             for (int i=0; i < megaArray.Length-1; i++)
             {
