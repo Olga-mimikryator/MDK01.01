@@ -41,5 +41,11 @@ namespace LR2
 
             return (employeesByEmployeeCategory, salariesOfEmployeesByCategory);
         }
+
+        static public string InputUserQuery()
+        {
+            Console.Write("Введите, пожалуйста, нужную Вам категорию работников(Инженеры/Научный корпус/Бухгалтерия): ");
+            return Console.ReadLine();
+        }
     }
 }
