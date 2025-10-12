@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LR2
 {
-    internal class SearchingModule
+    public class SearchingModule
     {
         static public int FindIndexCategory(string userQuery, string[] EmployeeCategory)
         {
