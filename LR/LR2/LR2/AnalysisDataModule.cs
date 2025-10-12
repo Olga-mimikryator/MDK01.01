@@ -28,5 +28,27 @@ namespace LR2
 
             return averageSalaries;
         }
+
+        static public void SortEmployeesBySalary(List<string> employees, List<double> averageSalaries)
+        {
+            for (int i = 0; i < averageSalaries.Count; ++i)
+            {
+                for (int j = 0; j < averageSalaries.Count - 1; ++j)
+                {
+                    bool condition = averageSalaries[j + 1] > averageSalaries[j];
+                    if (condition)
+                    {
+                        double temp_averageSalaries = averageSalaries[j];
+                        averageSalaries[j] = averageSalaries[j + 1];
+                        averageSalaries[j + 1] = temp_averageSalaries;
+
+                        string temp_employees = employees[j];
+                        employees[j] = employees[j + 1];
+                        employees[j + 1] = temp_employees;
+                    }
+                }
+            }
+        }
+
     }
 }
