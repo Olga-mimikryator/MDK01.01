@@ -10,6 +10,7 @@ namespace LR2
     {
         static void Main()
         {
+            string[] employeeCategory = new string[] { "Инженеры", "Научный корпус", "Бухгалтерия" };
 
         }
     }
