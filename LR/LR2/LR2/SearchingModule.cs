@@ -21,5 +21,18 @@ namespace LR2
 
             return -1;
         }
+
+        static public (List<string>, List<List<int>>) FindAllEmployeesByCategory(int indexCategory, 
+                                                                                 List<string>[] allEmployees, 
+                                                                                 List<List<int>>[] salaries)
+        {
+            List<string> employeesByCategory = new List<string>();
+            List<List<int>> salariesByCategory = new List<List<int>>();
+
+            employeesByCategory = allEmployees[indexCategory];
+            salariesByCategory = salaries[indexCategory];
+
+            return (employeesByCategory, salariesByCategory);
+        }
     }
 }
