@@ -39,6 +39,8 @@ namespace LR1
             Console.WriteLine($"Разница между минимальным элементом {min}" +
                               $" и максимальным элементом {max}: {minMaxDifference}");
 
+            
+
         }
     }
 }
