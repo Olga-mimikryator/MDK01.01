@@ -26,6 +26,18 @@ namespace Task2
                 }
             }
 
+            if (numbersEndingWith4.Count > 0)
+            {
+                Console.Write("[");
+                for (int i = 0; i < numbersEndingWith4.Count - 1; i++)
+                {
+                    Console.Write(numbersEndingWith4[i] + ",");
+                }
+                Console.Write(numbersEndingWith4[numbersEndingWith4.Count - 1] + "]");
+            }
+            else Console.WriteLine("Среди случайных чисел не было таких, " +
+                                    "которые оканчивались бы на четыре!");
+
         }
     }
 }
