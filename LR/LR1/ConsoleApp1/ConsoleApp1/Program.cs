@@ -26,6 +26,19 @@ namespace LR1
             Console.Write("Получившийся массив: ");
             Console.WriteLine(string.Join("; ", userArray));
 
+            double min = userArray[0];
+            double max = userArray[0];
+            for (int i = 1; i < lengthArray; i++)
+            {
+                if (userArray[i] < min)
+                    min = userArray[i];
+                if (userArray[i] > max)
+                    max = userArray[i];
+            }
+            double minMaxDifference = max - min;
+            Console.WriteLine($"Разница между минимальным элементом {min}" +
+                              $" и максимальным элементом {max}: {minMaxDifference}");
+
         }
     }
 }
