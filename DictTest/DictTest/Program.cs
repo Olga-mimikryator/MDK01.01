@@ -24,6 +24,30 @@ namespace DictTest
             Console.WriteLine($"Книга '{bookName}' успешно добавлена в жанр '{genre}'");
         }
 
+        static public void EditBook(Dictionary<Genre, List<string>> allBooks, string oldBookName, string newBookName)
+        {
+            bool bookFound = false;
+
+            foreach (List<string> books in allBooks.Values)
+            {
+                for (int index = 0; index < books.Count; ++index)
+                {
+                    if (books[index] == oldBookName)
+                    {
+                        books[index] = newBookName;
+                        bookFound = true;
+                        Console.WriteLine($"Книга '{oldBookName}' переименована в '{newBookName}'");
+                    }
+                }
+            }
+
+            if (!bookFound)
+            {
+                Console.WriteLine($"Книги '{oldBookName}' нет в каталоге. " +
+                                  $"МЫ тут вообще-то серьезными вещами занимаемся не дурите!");
+            }
+        }
+
         static public void RemoveBook(Dictionary<Genre, List<string>> allBooks,
                                    string bookName)
         {
@@ -118,6 +142,19 @@ namespace DictTest
                 Console.Write("Введите название книги: ");
                 string newBook = Console.ReadLine();
                 AddBook(catalogBooks, newBook, genre);
+            }
+
+            Console.Write("Хотите отредактировать название какой-либо книги? (да/нет): ");
+            answer = Console.ReadLine();
+            if (answer.ToLower() == "да")
+            {
+                Console.Write("Введите название книги, которое вам " +
+                              "без особых причин так жутко не понравилось: ");
+                string oldBookName = Console.ReadLine();
+                Console.Write("Введите новое название книги, " +
+                              "которое вам кажется более уникальным и подходящим: ");
+                string newBookName = Console.ReadLine();
+                EditBook(catalogBooks, oldBookName, newBookName);
             }
 
             Console.Write("Хотите удалить какую-то из книг? (да/нет): ");
