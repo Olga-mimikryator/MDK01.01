@@ -18,6 +18,12 @@ namespace DictTest
     internal class Program
     {
 
+        static public void AddBook(Dictionary<Genre, List<string>> allBooks, string bookName, Genre genre)
+        {
+            allBooks[genre].Add(bookName);
+            Console.WriteLine($"Книга '{bookName}' успешно добавлена в жанр '{genre}'");
+        }
+
         static public void RemoveBook(Dictionary<Genre, List<string>> allBooks,
                                    string bookName)
         {
@@ -105,10 +111,25 @@ namespace DictTest
 
             PrintBooksByGenre(genre, catalogBooks);
 
-            Console.Write("Какую книгу хотите удалить?");
-            string book = Console.ReadLine();
-            RemoveBook(catalogBooks, book);
-            Console.WriteLine("Набор книг после удаления");
+            Console.Write("Хотите добавить книгу? (да/нет): ");
+            string answer = Console.ReadLine();
+            if (answer.ToLower() == "да")
+            {
+                Console.Write("Введите название книги: ");
+                string newBook = Console.ReadLine();
+                AddBook(catalogBooks, newBook, genre);
+            }
+
+            Console.Write("Хотите удалить какую-то из книг? (да/нет): ");
+            answer = Console.ReadLine();
+            if (answer.ToLower() == "да")
+            {
+                Console.Write("Какую книгу хотите удалить?");
+                string book = Console.ReadLine();
+                RemoveBook(catalogBooks, book);
+            }
+
+            Console.WriteLine("Набор книг после опериций:");
             PrintBooksByGenre(genre, catalogBooks);
 
         }
