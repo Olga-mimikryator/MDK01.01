@@ -60,9 +60,13 @@ namespace StructProject
 
             }
 
-            
-            //Console.WriteLine("Длина 5 вектора = "
-            
+            List<double> allVectorsVal = CalculateValVector(allVectors);
+            Console.WriteLine("Длины десяти векторов: "+ string.Join("; ", allVectorsVal));
+
+            for (int i =0; i < allVectors.Length; i++)
+            {
+                Console.WriteLine($"Длина вектора {i + 1} - {allVectorsVal[i]}");
+            }
 
         }
     }
