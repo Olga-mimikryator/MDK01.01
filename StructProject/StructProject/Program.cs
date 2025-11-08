@@ -1,11 +1,25 @@
 ﻿
 using System;
+using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 
 namespace StructProject
 {
+    
     class Program
     {
+
+        static public List<double> CalculateValVector(Vector[] allVectors)
+        {
+            List<double> valVectors = new List<double>();
+            for (int i = 0; i < allVectors.Length; i++)
+            {
+                valVectors.Add(Point.CalcLenVector(allVectors[i].begin, allVectors[i].end));
+            }
+            return valVectors;
+        }
+
         static void Main()
         {
             Point beginVector = new Point();
@@ -44,11 +58,11 @@ namespace StructProject
                 Console.WriteLine($"{v.begin.Name}:({v.begin.X}, {v.begin.Y})" +
                   $" | {v.end.Name}:({v.end.X}, {v.end.Y})");
 
-                Thread.Sleep(2000);
             }
 
-            Console.WriteLine("Длина 5 вектора = "
-                + Point.CalcLenVector(allVectors[4].begin, allVectors[4].end));
+            
+            //Console.WriteLine("Длина 5 вектора = "
+            
 
         }
     }
