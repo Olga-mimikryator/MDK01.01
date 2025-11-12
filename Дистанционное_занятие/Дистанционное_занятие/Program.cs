@@ -8,6 +8,35 @@ namespace Дистанционное_занятие
 {
     internal class Program
     {
+        /// Функция для поиска десяти объектов из списка 
+        /// с наибольшим значением параметра liters
+        static List<FuelRefill> GetTop10ByLiters(List<FuelRefill> list)
+        {
+            List<FuelRefill> sortedList = new List<FuelRefill>(list);
+
+            // Сортируем по убыванию литров
+            for (int i = 0; i < sortedList.Count - 1; i++)
+            {
+                for (int j = 0; j < sortedList.Count - i - 1; j++)
+                {
+                    if (sortedList[j].liters < sortedList[j + 1].liters)
+                    {
+                        FuelRefill temp = sortedList[j];
+                        sortedList[j] = sortedList[j + 1];
+                        sortedList[j + 1] = temp;
+                    }
+                }
+            }
+
+            // Возвращаем первые 10
+            List<FuelRefill> top10 = new List<FuelRefill>();
+            for (int i = 0; i < 10 && i < sortedList.Count; i++)
+            {
+                top10.Add(sortedList[i]);
+            }
+            return top10;
+        }
+
         static void Main()
         {
             /// Список из структур FuelRefill
@@ -24,6 +53,14 @@ namespace Дистанционное_занятие
 
                 refills.Add(newrefill);
                 ///refills[i].Show();
+            }
+
+            List<FuelRefill> topLiters = GetTop10ByLiters(refills);
+            Console.WriteLine("Топ-10 по количеству литров:");
+            for (int i = 0; i < topLiters.Count; i++)
+            {
+                Console.Write($"{i + 1}. ");
+                topLiters[i].Show();
             }
         }
     }
