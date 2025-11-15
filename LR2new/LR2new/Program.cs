@@ -8,6 +8,7 @@ namespace LR2new
 {
     class Program
     {
+        
         static void Main()
         {
             //Вариант 10
