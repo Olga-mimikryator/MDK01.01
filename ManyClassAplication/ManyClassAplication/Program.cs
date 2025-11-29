@@ -32,7 +32,8 @@ namespace ManyClassAplication
             Console.WriteLine($"Общая стоимость всех товаров: {TorzhokWarFullGoodsPrice} рублей");
 
             ////////////////////////////////////
-            
+            StructByGoods mers = new StructByGoods();
+            mers.goods = car1;
         }
     }
 }
