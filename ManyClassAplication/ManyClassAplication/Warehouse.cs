@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,5 +37,38 @@ namespace ManyClassAplication
         {
             return goodsCount_;
         }
+
+        public void PrintGoodsCountWarehouse()
+        {
+            Console.WriteLine("Все товары на складе:");
+            foreach(Goods goods in goodsCount_.Keys)
+            {
+                int count = goodsCount_[goods];
+                Console.WriteLine($"Товар: {goods.GetName()}");
+                Console.WriteLine($"Количество: {count}");
+            }
+        }
+        //public int CalcFullCountGoods()
+        //{
+        //    int fullCount = 0;
+        //    foreach (Goods goods in goodsCount_.Keys)
+        //    {
+        //        int count = goodsCount_[goods];
+        //        fullCount += count;
+        //    }
+        //    return fullCount;
+        //}
+        public double CalcFullPriceGoodsInWarehouse()
+        {
+            double fullPrice = 0;
+            foreach (Goods goods in goodsCount_.Keys)
+            {
+                int count = goodsCount_[goods];
+                double price = goods.GetPrice();
+                fullPrice += price*count;
+            }
+            return fullPrice;
+        }
+
     }
 }

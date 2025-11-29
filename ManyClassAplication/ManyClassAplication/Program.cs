@@ -25,6 +25,13 @@ namespace ManyClassAplication
             TorzhokWarehouse.SetGoodsCount(car2, 5);
 
             Console.WriteLine($"Уникальный код склада: {TorzhokWarehouse.GetId()} | Адрес склада: {TorzhokWarehouse.GetLocation()}");
+            TorzhokWarehouse.PrintGoodsCountWarehouse();
+            //int TorzhokWarFullGoodsCount = TorzhokWarehouse.CalcFullCountGoods();
+            //Console.WriteLine($"Всего на складе {TorzhokWarFullGoodsCount} товаров");
+            double TorzhokWarFullGoodsPrice = TorzhokWarehouse.CalcFullPriceGoodsInWarehouse();
+            Console.WriteLine($"Общая стоимость всех товаров: {TorzhokWarFullGoodsPrice} рублей");
+
+            ////////////////////////////////////
             
         }
     }
