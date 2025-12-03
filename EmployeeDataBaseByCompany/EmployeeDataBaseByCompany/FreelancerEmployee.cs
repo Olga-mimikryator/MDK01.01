@@ -12,6 +12,7 @@ namespace EmployeeDataBaseByCompany
         private double PriceProject_;   ///плата за проект
         private double Ndfl_;
 
+        ///обычные методы для ввода данных в поля
         public void SetPriceProject(double PriceProject)
         {
             PriceProject_ = PriceProject;
@@ -21,6 +22,7 @@ namespace EmployeeDataBaseByCompany
             Ndfl_ = Ndfl;
         }
 
+        ///реализация метода подсчета зп для сотрудников на удаленке с учетом ндфл
         public override double CalculateSalary()
         {
             double SalaryBeforeNdfl = PriceProject_ - (PriceProject_ * Ndfl_ / 100);

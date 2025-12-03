@@ -10,10 +10,12 @@ namespace EmployeeDataBaseByCompany
     {
         private double SalaryMonth_; ///фиксированная месячная плата
 
+        ///обычный метод для ввода фиксированной месячной зп
         public void SetSalaryMonth(double SalaryMonth)
         {
             SalaryMonth_ = SalaryMonth;
         }
+        ///реализация метода подсчета зп для сотрудников с фиксированной зп
         public override double CalculateSalary()
         {
             return SalaryMonth_;

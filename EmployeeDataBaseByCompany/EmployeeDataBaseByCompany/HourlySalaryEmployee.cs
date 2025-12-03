@@ -13,6 +13,7 @@ namespace EmployeeDataBaseByCompany
         private double OvertimeSalary_;         ///плата по сверхурочным часам
         private double OvertimeHours_;          ///количесвто свезхурочных часов
 
+        ///методы для ввода ифнормации в поля объекта
         public void SetSalaryByOneHourWork(double SalaryByOneHourWork)
         {
             SalaryByOneHourWork_ = SalaryByOneHourWork;
@@ -30,6 +31,7 @@ namespace EmployeeDataBaseByCompany
             OvertimeHours_ = OvertimeHours;
         }
 
+        ///реализация метода для подсчета зп сотрудников с почасовой зп
         public override double CalculateSalary()
         {
             double SalaryWork = SalaryByOneHourWork_ * HoursWork_;
