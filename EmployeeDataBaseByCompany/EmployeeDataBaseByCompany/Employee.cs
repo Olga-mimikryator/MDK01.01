@@ -37,6 +37,6 @@ namespace EmployeeDataBaseByCompany
             return Email_;
         }
 
-        public abstract decimal CalculateSalary();
+        public abstract double CalculateSalary();
     }
 }
