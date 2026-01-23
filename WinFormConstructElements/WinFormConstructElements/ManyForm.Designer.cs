@@ -42,63 +42,66 @@
             // StudentList
             // 
             this.StudentList.Dock = System.Windows.Forms.DockStyle.Left;
+            this.StudentList.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.StudentList.FormattingEnabled = true;
+            this.StudentList.ItemHeight = 15;
             this.StudentList.Location = new System.Drawing.Point(0, 0);
             this.StudentList.Name = "StudentList";
-            this.StudentList.Size = new System.Drawing.Size(250, 450);
+            this.StudentList.Size = new System.Drawing.Size(280, 325);
             this.StudentList.TabIndex = 2;
             this.StudentList.SelectedIndexChanged += new System.EventHandler(this.StudentList_SelectedIndexChanged);
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.SystemColors.Info;
             this.panel1.Controls.Add(this.numberLabel);
             this.panel1.Controls.Add(this.argBallLabel);
             this.panel1.Controls.Add(this.ageLabel);
             this.panel1.Controls.Add(this.nameLabel);
             this.panel1.Controls.Add(this.StudentPhoto);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(250, 0);
+            this.panel1.Location = new System.Drawing.Point(280, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(550, 450);
+            this.panel1.Size = new System.Drawing.Size(814, 325);
             this.panel1.TabIndex = 3;
             // 
             // numberLabel
             // 
             this.numberLabel.AutoSize = true;
-            this.numberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numberLabel.Location = new System.Drawing.Point(235, 128);
+            this.numberLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numberLabel.Location = new System.Drawing.Point(247, 132);
             this.numberLabel.Name = "numberLabel";
-            this.numberLabel.Size = new System.Drawing.Size(60, 24);
+            this.numberLabel.Size = new System.Drawing.Size(53, 21);
             this.numberLabel.TabIndex = 6;
             this.numberLabel.Text = "label3";
             // 
             // argBallLabel
             // 
             this.argBallLabel.AutoSize = true;
-            this.argBallLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.argBallLabel.Location = new System.Drawing.Point(235, 176);
+            this.argBallLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.argBallLabel.Location = new System.Drawing.Point(247, 180);
             this.argBallLabel.Name = "argBallLabel";
-            this.argBallLabel.Size = new System.Drawing.Size(60, 24);
+            this.argBallLabel.Size = new System.Drawing.Size(53, 21);
             this.argBallLabel.TabIndex = 5;
             this.argBallLabel.Text = "label4";
             // 
             // ageLabel
             // 
             this.ageLabel.AutoSize = true;
-            this.ageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ageLabel.Location = new System.Drawing.Point(235, 83);
+            this.ageLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ageLabel.Location = new System.Drawing.Point(247, 87);
             this.ageLabel.Name = "ageLabel";
-            this.ageLabel.Size = new System.Drawing.Size(60, 24);
+            this.ageLabel.Size = new System.Drawing.Size(53, 21);
             this.ageLabel.TabIndex = 4;
             this.ageLabel.Text = "label2";
             // 
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.nameLabel.Location = new System.Drawing.Point(235, 39);
+            this.nameLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.nameLabel.Location = new System.Drawing.Point(247, 43);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(60, 24);
+            this.nameLabel.Size = new System.Drawing.Size(53, 21);
             this.nameLabel.TabIndex = 3;
             this.nameLabel.Text = "label1";
             // 
@@ -106,7 +109,8 @@
             // 
             this.StudentPhoto.Location = new System.Drawing.Point(25, 12);
             this.StudentPhoto.Name = "StudentPhoto";
-            this.StudentPhoto.Size = new System.Drawing.Size(172, 224);
+            this.StudentPhoto.Size = new System.Drawing.Size(204, 230);
+            this.StudentPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.StudentPhoto.TabIndex = 2;
             this.StudentPhoto.TabStop = false;
             // 
@@ -114,7 +118,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1094, 325);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.StudentList);
             this.Name = "ManyForm";
