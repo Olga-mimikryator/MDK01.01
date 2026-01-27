@@ -43,5 +43,10 @@ namespace WinFormConstructElements
                 StudentPhoto.Image = Image.FromFile(student.Photo.ToString());
             }
         }
+
+        private void ManyForm_Load(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

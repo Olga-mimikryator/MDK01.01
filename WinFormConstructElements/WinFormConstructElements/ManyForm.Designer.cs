@@ -123,6 +123,7 @@
             this.Controls.Add(this.StudentList);
             this.Name = "ManyForm";
             this.Text = "Информация о студентах";
+            this.Load += new System.EventHandler(this.ManyForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentPhoto)).EndInit();
