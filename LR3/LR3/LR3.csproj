@@ -1,14 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FEE1AFAA-C7EA-403D-9BF7-FE56FE680ECD}</ProjectGuid>
+    <ProjectGuid>{B4F350D5-98FA-4322-81F1-111CEA1BF1B0}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>LR3</RootNamespace>
     <AssemblyName>LR3</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Food.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +78,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DrugLib\ProductLib.csproj">
+      <Project>{25be7bbe-fa4d-4253-9a0e-a2806b67ad6f}</Project>
+      <Name>ProductLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnitTestDrugs\UnitTestProduct.csproj">
+      <Project>{9084b9ff-8b89-4f66-ba05-14e00b94fb83}</Project>
+      <Name>UnitTestProduct</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

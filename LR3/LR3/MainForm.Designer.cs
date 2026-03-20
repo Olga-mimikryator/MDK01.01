@@ -28,243 +28,192 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.orderButton = new System.Windows.Forms.Button();
-            this.quantityFoodNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.foodByTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.CategoriesListBox = new System.Windows.Forms.ListBox();
+            this.ProductComboBox = new System.Windows.Forms.ComboBox();
+            this.DrugPictureBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.foodTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.myOrderRichTextBox = new System.Windows.Forms.RichTextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.foodPhotoPictureBox = new System.Windows.Forms.PictureBox();
-            this.expirationDateLabel = new System.Windows.Forms.Label();
-            this.manufacturerFoodLabel = new System.Windows.Forms.Label();
-            this.supplierFoodLabel = new System.Windows.Forms.Label();
-            this.priceFoodLabel = new System.Windows.Forms.Label();
-            this.foodNameLabel = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.quantityFoodNumericUpDown)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.foodPhotoPictureBox)).BeginInit();
+            this.label4 = new System.Windows.Forms.Label();
+            this.PriceLabel = new System.Windows.Forms.Label();
+            this.ManufacturerLabel = new System.Windows.Forms.Label();
+            this.DateLabel = new System.Windows.Forms.Label();
+            this.ProviderLabel = new System.Windows.Forms.Label();
+            this.OrderButton = new System.Windows.Forms.Button();
+            this.QuantityNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.DrugPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QuantityNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // CategoriesListBox
             // 
-            this.panel1.Controls.Add(this.orderButton);
-            this.panel1.Controls.Add(this.quantityFoodNumericUpDown);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.foodByTypeComboBox);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.foodTypeComboBox);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(668, 111);
-            this.panel1.TabIndex = 0;
+            this.CategoriesListBox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.CategoriesListBox.FormattingEnabled = true;
+            this.CategoriesListBox.Location = new System.Drawing.Point(0, 0);
+            this.CategoriesListBox.Name = "CategoriesListBox";
+            this.CategoriesListBox.Size = new System.Drawing.Size(213, 411);
+            this.CategoriesListBox.TabIndex = 0;
+            this.CategoriesListBox.SelectedIndexChanged += new System.EventHandler(this.CategoriesListBox_SelectedIndexChanged);
             // 
-            // orderButton
+            // ProductComboBox
             // 
-            this.orderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.orderButton.Location = new System.Drawing.Point(543, 55);
-            this.orderButton.Name = "orderButton";
-            this.orderButton.Size = new System.Drawing.Size(113, 33);
-            this.orderButton.TabIndex = 5;
-            this.orderButton.Text = "Заказать";
-            this.orderButton.UseVisualStyleBackColor = true;
+            this.ProductComboBox.FormattingEnabled = true;
+            this.ProductComboBox.Location = new System.Drawing.Point(219, 12);
+            this.ProductComboBox.Name = "ProductComboBox";
+            this.ProductComboBox.Size = new System.Drawing.Size(192, 21);
+            this.ProductComboBox.TabIndex = 1;
+            this.ProductComboBox.SelectedIndexChanged += new System.EventHandler(this.ProductComboBox_SelectedIndexChanged);
             // 
-            // quantityFoodNumericUpDown
+            // DrugPictureBox
             // 
-            this.quantityFoodNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.quantityFoodNumericUpDown.Location = new System.Drawing.Point(470, 57);
-            this.quantityFoodNumericUpDown.Name = "quantityFoodNumericUpDown";
-            this.quantityFoodNumericUpDown.Size = new System.Drawing.Size(48, 29);
-            this.quantityFoodNumericUpDown.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(242, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 24);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Продукты";
-            // 
-            // foodByTypeComboBox
-            // 
-            this.foodByTypeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.foodByTypeComboBox.FormattingEnabled = true;
-            this.foodByTypeComboBox.Location = new System.Drawing.Point(246, 55);
-            this.foodByTypeComboBox.Name = "foodByTypeComboBox";
-            this.foodByTypeComboBox.Size = new System.Drawing.Size(208, 33);
-            this.foodByTypeComboBox.TabIndex = 2;
+            this.DrugPictureBox.Location = new System.Drawing.Point(219, 61);
+            this.DrugPictureBox.Name = "ProductPictureBox";
+            this.DrugPictureBox.Size = new System.Drawing.Size(657, 197);
+            this.DrugPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.DrugPictureBox.TabIndex = 2;
+            this.DrugPictureBox.TabStop = false;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(15, 22);
+            this.label1.Location = new System.Drawing.Point(488, 281);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Группа продуктов";
+            this.label1.Size = new System.Drawing.Size(80, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Цена за штуку";
             // 
-            // foodTypeComboBox
+            // label2
             // 
-            this.foodTypeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.foodTypeComboBox.FormattingEnabled = true;
-            this.foodTypeComboBox.Location = new System.Drawing.Point(19, 55);
-            this.foodTypeComboBox.Name = "foodTypeComboBox";
-            this.foodTypeComboBox.Size = new System.Drawing.Size(208, 33);
-            this.foodTypeComboBox.TabIndex = 0;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(488, 307);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Изготовитель";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(3, 3);
+            this.label3.Location = new System.Drawing.Point(488, 335);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 24);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Мой заказ:";
+            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Годен до";
             // 
-            // panel3
+            // label4
             // 
-            this.panel3.Controls.Add(this.myOrderRichTextBox);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 346);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(668, 218);
-            this.panel3.TabIndex = 3;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(488, 361);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(65, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Поставщик";
             // 
-            // myOrderRichTextBox
+            // PriceLabel
             // 
-            this.myOrderRichTextBox.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.myOrderRichTextBox.Location = new System.Drawing.Point(0, 30);
-            this.myOrderRichTextBox.Name = "myOrderRichTextBox";
-            this.myOrderRichTextBox.Size = new System.Drawing.Size(668, 188);
-            this.myOrderRichTextBox.TabIndex = 4;
-            this.myOrderRichTextBox.Text = "";
+            this.PriceLabel.AutoSize = true;
+            this.PriceLabel.Location = new System.Drawing.Point(616, 281);
+            this.PriceLabel.Name = "PriceLabel";
+            this.PriceLabel.Size = new System.Drawing.Size(57, 13);
+            this.PriceLabel.TabIndex = 7;
+            this.PriceLabel.Text = "PriceLabel";
             // 
-            // panel2
+            // ManufacturerLabel
             // 
-            this.panel2.Controls.Add(this.expirationDateLabel);
-            this.panel2.Controls.Add(this.manufacturerFoodLabel);
-            this.panel2.Controls.Add(this.supplierFoodLabel);
-            this.panel2.Controls.Add(this.priceFoodLabel);
-            this.panel2.Controls.Add(this.foodNameLabel);
-            this.panel2.Controls.Add(this.foodPhotoPictureBox);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 111);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(668, 235);
-            this.panel2.TabIndex = 4;
+            this.ManufacturerLabel.AutoSize = true;
+            this.ManufacturerLabel.Location = new System.Drawing.Point(616, 307);
+            this.ManufacturerLabel.Name = "ManufacturerLabel";
+            this.ManufacturerLabel.Size = new System.Drawing.Size(96, 13);
+            this.ManufacturerLabel.TabIndex = 8;
+            this.ManufacturerLabel.Text = "ManufacturerLabel";
             // 
-            // foodPhotoPictureBox
+            // DateLabel
             // 
-            this.foodPhotoPictureBox.Dock = System.Windows.Forms.DockStyle.Left;
-            this.foodPhotoPictureBox.Location = new System.Drawing.Point(0, 0);
-            this.foodPhotoPictureBox.Name = "foodPhotoPictureBox";
-            this.foodPhotoPictureBox.Size = new System.Drawing.Size(235, 235);
-            this.foodPhotoPictureBox.TabIndex = 0;
-            this.foodPhotoPictureBox.TabStop = false;
+            this.DateLabel.AutoSize = true;
+            this.DateLabel.Location = new System.Drawing.Point(616, 335);
+            this.DateLabel.Name = "DateLabel";
+            this.DateLabel.Size = new System.Drawing.Size(56, 13);
+            this.DateLabel.TabIndex = 9;
+            this.DateLabel.Text = "DateLabel";
             // 
-            // expirationDateLabel
+            // ProviderLabel
             // 
-            this.expirationDateLabel.AutoSize = true;
-            this.expirationDateLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.expirationDateLabel.Location = new System.Drawing.Point(262, 169);
-            this.expirationDateLabel.Name = "expirationDateLabel";
-            this.expirationDateLabel.Size = new System.Drawing.Size(60, 24);
-            this.expirationDateLabel.TabIndex = 9;
-            this.expirationDateLabel.Text = "label3";
+            this.ProviderLabel.AutoSize = true;
+            this.ProviderLabel.Location = new System.Drawing.Point(616, 361);
+            this.ProviderLabel.Name = "ProviderLabel";
+            this.ProviderLabel.Size = new System.Drawing.Size(72, 13);
+            this.ProviderLabel.TabIndex = 10;
+            this.ProviderLabel.Text = "ProviderLabel";
             // 
-            // manufacturerFoodLabel
+            // OrderButton
             // 
-            this.manufacturerFoodLabel.AutoSize = true;
-            this.manufacturerFoodLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.manufacturerFoodLabel.Location = new System.Drawing.Point(262, 136);
-            this.manufacturerFoodLabel.Name = "manufacturerFoodLabel";
-            this.manufacturerFoodLabel.Size = new System.Drawing.Size(60, 24);
-            this.manufacturerFoodLabel.TabIndex = 8;
-            this.manufacturerFoodLabel.Text = "label3";
+            this.OrderButton.Location = new System.Drawing.Point(230, 320);
+            this.OrderButton.Name = "OrderButton";
+            this.OrderButton.Size = new System.Drawing.Size(205, 28);
+            this.OrderButton.TabIndex = 11;
+            this.OrderButton.Text = "Заказать";
+            this.OrderButton.UseVisualStyleBackColor = true;
+            this.OrderButton.Click += new System.EventHandler(this.OrderButton_Click);
             // 
-            // supplierFoodLabel
+            // QuantityNumericUpDown
             // 
-            this.supplierFoodLabel.AutoSize = true;
-            this.supplierFoodLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.supplierFoodLabel.Location = new System.Drawing.Point(262, 101);
-            this.supplierFoodLabel.Name = "supplierFoodLabel";
-            this.supplierFoodLabel.Size = new System.Drawing.Size(60, 24);
-            this.supplierFoodLabel.TabIndex = 7;
-            this.supplierFoodLabel.Text = "label3";
-            // 
-            // priceFoodLabel
-            // 
-            this.priceFoodLabel.AutoSize = true;
-            this.priceFoodLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.priceFoodLabel.Location = new System.Drawing.Point(262, 66);
-            this.priceFoodLabel.Name = "priceFoodLabel";
-            this.priceFoodLabel.Size = new System.Drawing.Size(60, 24);
-            this.priceFoodLabel.TabIndex = 6;
-            this.priceFoodLabel.Text = "label3";
-            // 
-            // foodNameLabel
-            // 
-            this.foodNameLabel.AutoSize = true;
-            this.foodNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.foodNameLabel.Location = new System.Drawing.Point(262, 31);
-            this.foodNameLabel.Name = "foodNameLabel";
-            this.foodNameLabel.Size = new System.Drawing.Size(60, 24);
-            this.foodNameLabel.TabIndex = 5;
-            this.foodNameLabel.Text = "label3";
+            this.QuantityNumericUpDown.Location = new System.Drawing.Point(230, 285);
+            this.QuantityNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.QuantityNumericUpDown.Name = "QuantityNumericUpDown";
+            this.QuantityNumericUpDown.Size = new System.Drawing.Size(205, 20);
+            this.QuantityNumericUpDown.TabIndex = 12;
+            this.QuantityNumericUpDown.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 564);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(990, 411);
+            this.Controls.Add(this.QuantityNumericUpDown);
+            this.Controls.Add(this.OrderButton);
+            this.Controls.Add(this.ProviderLabel);
+            this.Controls.Add(this.DateLabel);
+            this.Controls.Add(this.ManufacturerLabel);
+            this.Controls.Add(this.PriceLabel);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.DrugPictureBox);
+            this.Controls.Add(this.ProductComboBox);
+            this.Controls.Add(this.CategoriesListBox);
             this.Name = "MainForm";
-            this.Text = "Заказ продуктов";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.quantityFoodNumericUpDown)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.foodPhotoPictureBox)).EndInit();
+            this.Text = "вариант4";
+            ((System.ComponentModel.ISupportInitialize)(this.DrugPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.QuantityNumericUpDown)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ListBox CategoriesListBox;
+        private System.Windows.Forms.ComboBox ProductComboBox;
+        private System.Windows.Forms.PictureBox DrugPictureBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox foodTypeComboBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox foodByTypeComboBox;
-        private System.Windows.Forms.Button orderButton;
-        private System.Windows.Forms.NumericUpDown quantityFoodNumericUpDown;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.RichTextBox myOrderRichTextBox;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label expirationDateLabel;
-        private System.Windows.Forms.Label manufacturerFoodLabel;
-        private System.Windows.Forms.Label supplierFoodLabel;
-        private System.Windows.Forms.Label priceFoodLabel;
-        private System.Windows.Forms.Label foodNameLabel;
-        private System.Windows.Forms.PictureBox foodPhotoPictureBox;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label PriceLabel;
+        private System.Windows.Forms.Label ManufacturerLabel;
+        private System.Windows.Forms.Label DateLabel;
+        private System.Windows.Forms.Label ProviderLabel;
+        private System.Windows.Forms.Button OrderButton;
+        private System.Windows.Forms.NumericUpDown QuantityNumericUpDown;
     }
 }
 
