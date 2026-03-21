@@ -1,6 +1,6 @@
 ﻿namespace SQLTest
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -39,6 +39,7 @@
             this.userDataGridView.Dock = System.Windows.Forms.DockStyle.Top;
             this.userDataGridView.Location = new System.Drawing.Point(0, 0);
             this.userDataGridView.Name = "userDataGridView";
+            this.userDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.userDataGridView.Size = new System.Drawing.Size(602, 213);
             this.userDataGridView.TabIndex = 0;
             // 
@@ -52,14 +53,14 @@
             this.buttonDelete.UseVisualStyleBackColor = true;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(602, 415);
             this.Controls.Add(this.buttonDelete);
             this.Controls.Add(this.userDataGridView);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.userDataGridView)).EndInit();
             this.ResumeLayout(false);

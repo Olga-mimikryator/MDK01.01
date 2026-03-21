@@ -1,6 +1,7 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,11 +11,11 @@ namespace SQLTest
 {
     public class PgUsersLoader
     {
-        public List<User> Load()
+        BindingList<User> users = new BindingList<User>();
+        public BindingList<User> Load()
         {
             try
             {
-                List<User> users = new List<User>();
                 var cs = "Host=192.168.1.48;Username=st50-12;Password=5012;Database=P-30_Student";
 
                 var con = new NpgsqlConnection(cs);
@@ -40,7 +41,6 @@ namespace SQLTest
                 MessageBox.Show($"Ошибка: {ex.Message}");
                 return null;
             }
-            
         }
 
         public bool DeleteUser(string login)
@@ -51,9 +51,19 @@ namespace SQLTest
                 var cs = "Host=192.168.1.48;Username=st50-12;Password=5012;Database=P-30_Student";
                 var con = new NpgsqlConnection(cs);
                 con.Open();
-                var sql = @"DELETE FROM students WHERE login = @login";
+                var sql = @"DELETE FROM users WHERE login = @login";
                 var cmd = new NpgsqlCommand(sql, con);
                 cmd.Parameters.AddWithValue("@login", login);
+
+                for (int index=0; index < users.Count; ++index)
+                {
+                    if (users[index].Login == login)
+                    {
+                        users.RemoveAt(index);
+                        --index;
+                    }
+                }
+
                 if(cmd.ExecuteNonQuery() > 0)
                 {
                     return true;

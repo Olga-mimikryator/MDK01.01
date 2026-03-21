@@ -12,19 +12,21 @@ using Npgsql;
 
 namespace SQLTest
 {
-    public partial class Form1: Form
+    public partial class MainForm: Form
     {
         PgUsersLoader pgUsersLoader = new PgUsersLoader();
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
-            List<User> users = pgUsersLoader.Load();
+            BindingList<User> users = pgUsersLoader.Load();
             userDataGridView.DataSource = users;
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-
+            DataGridViewRow row = userDataGridView.SelectedRows[0];
+            User user = row.DataBoundItem as User;
+            pgUsersLoader.DeleteUser(user.Login);
         }
     }
 }
