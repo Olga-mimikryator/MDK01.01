@@ -16,7 +16,7 @@ namespace SQLTest
         {
             try
             {
-                var cs = "Host=192.168.1.48;Username=st50-12;Password=5012;Database=P-30_Student";
+                var cs = "Host=192.168.1.48;Username=st56-10;Password=5610;Database=DbforPM_OlgaSafonova";
 
                 var con = new NpgsqlConnection(cs);
                 con.Open();
@@ -48,7 +48,7 @@ namespace SQLTest
             try
             {
                 bool result = true;
-                var cs = "Host=192.168.1.48;Username=st50-12;Password=5012;Database=P-30_Student";
+                var cs = "Host=192.168.1.48;Username=st56-10;Password=5610;Database=DbforPM_OlgaSafonova";
                 var con = new NpgsqlConnection(cs);
                 con.Open();
                 var sql = @"DELETE FROM users WHERE login = @login";
@@ -71,6 +71,57 @@ namespace SQLTest
                 return false;
             }
             catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка: {ex.Message}");
+                return false;
+            }
+        }
+
+        public bool ClearUsers()
+        {
+            try
+            {
+                bool result = true;
+                var cs = "Host=192.168.1.48;Username=st56-10;Password=5610;Database=DbforPM_OlgaSafonova";
+                var con = new NpgsqlConnection(cs);
+                con.Open();
+                var sql = @"DELETE FROM users";
+                var cmd = new NpgsqlCommand(sql, con);
+                int execute = cmd.ExecuteNonQuery();
+
+                if(execute > 0)
+                {
+                    result = true;
+                }
+                users.Clear();
+                return false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка: {ex.Message}");
+                return false;
+            }
+        }
+
+        public bool AddUser(User newUser)
+        {
+            try
+            {
+                bool result = true;
+                var cs = "Host=192.168.1.48;Username=st56-10;Password=5610;Database=DbforPM_OlgaSafonova";
+                var con = new NpgsqlConnection(cs);
+                con.Open();
+                var sql = @"INSERT INTO users(login, password, age, name) VALUES (@newUser.Login, @newUser.Password, @newUser.Age, @newUser.Name)";
+                var cmd = new NpgsqlCommand(sql, con);
+                int execute = cmd.ExecuteNonQuery();
+                if (execute > 0)
+                {
+                    result = true;
+                }
+                users.Add(newUser);
+                return false;
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show($"Ошибка: {ex.Message}");
                 return false;

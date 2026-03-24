@@ -28,5 +28,14 @@ namespace SQLTest
             User user = row.DataBoundItem as User;
             pgUsersLoader.DeleteUser(user.Login);
         }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Вы уверены, что хотите очистить пользовательскую базу?", "Внимание", MessageBoxButtons.OKCancel);
+            if(result == DialogResult.OK)
+            {
+                pgUsersLoader.ClearUsers();
+            }
+        }
     }
 }
