@@ -101,11 +101,11 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewUser.cs">
+    <Compile Include="AddOrEditUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewUser.Designer.cs">
-      <DependentUpon>NewUser.cs</DependentUpon>
+    <Compile Include="AddOrEditUser.Designer.cs">
+      <DependentUpon>AddOrEditUser.cs</DependentUpon>
     </Compile>
     <Compile Include="PgUsersLoader.cs" />
     <Compile Include="Program.cs" />
@@ -114,8 +114,8 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewUser.resx">
-      <DependentUpon>NewUser.cs</DependentUpon>
+    <EmbeddedResource Include="AddOrEditUser.resx">
+      <DependentUpon>AddOrEditUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

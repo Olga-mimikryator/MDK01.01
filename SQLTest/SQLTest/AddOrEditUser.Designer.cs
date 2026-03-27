@@ -1,6 +1,6 @@
 ﻿namespace SQLTest
 {
-    partial class NewUser
+    partial class AddOrEditUser
     {
         /// <summary>
         /// Required designer variable.
@@ -34,10 +34,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxName = new System.Windows.Forms.TextBox();
-            this.textBoxAge = new System.Windows.Forms.TextBox();
             this.textBoxLogin = new System.Windows.Forms.TextBox();
             this.textBoxPassw = new System.Windows.Forms.TextBox();
             this.buttonDone = new System.Windows.Forms.Button();
+            this.numericUpDownAge = new System.Windows.Forms.NumericUpDown();
+            this.buttonCancel = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAge)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -98,14 +100,6 @@
             this.textBoxName.Size = new System.Drawing.Size(150, 26);
             this.textBoxName.TabIndex = 5;
             // 
-            // textBoxAge
-            // 
-            this.textBoxAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxAge.Location = new System.Drawing.Point(129, 109);
-            this.textBoxAge.Name = "textBoxAge";
-            this.textBoxAge.Size = new System.Drawing.Size(150, 26);
-            this.textBoxAge.TabIndex = 5;
-            // 
             // textBoxLogin
             // 
             this.textBoxLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -131,24 +125,61 @@
             this.buttonDone.TabIndex = 6;
             this.buttonDone.Text = "Готово";
             this.buttonDone.UseVisualStyleBackColor = true;
+            this.buttonDone.Click += new System.EventHandler(this.buttonDone_Click);
             // 
-            // NewUser
+            // numericUpDownAge
+            // 
+            this.numericUpDownAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numericUpDownAge.Location = new System.Drawing.Point(129, 107);
+            this.numericUpDownAge.Maximum = new decimal(new int[] {
+            120,
+            0,
+            0,
+            0});
+            this.numericUpDownAge.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownAge.Name = "numericUpDownAge";
+            this.numericUpDownAge.Size = new System.Drawing.Size(150, 26);
+            this.numericUpDownAge.TabIndex = 7;
+            this.numericUpDownAge.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // buttonCancel
+            // 
+            this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonCancel.Location = new System.Drawing.Point(121, 220);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(99, 30);
+            this.buttonCancel.TabIndex = 8;
+            this.buttonCancel.Text = "Отмена";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
+            // 
+            // AddOrEditUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(348, 271);
+            this.Controls.Add(this.buttonCancel);
+            this.Controls.Add(this.numericUpDownAge);
             this.Controls.Add(this.buttonDone);
             this.Controls.Add(this.textBoxPassw);
             this.Controls.Add(this.textBoxLogin);
-            this.Controls.Add(this.textBoxAge);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "NewUser";
-            this.Text = "Новый пользователь";
+            this.Name = "AddOrEditUser";
+            this.Text = "О пользователе";
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAge)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,9 +193,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxName;
-        private System.Windows.Forms.TextBox textBoxAge;
         private System.Windows.Forms.TextBox textBoxLogin;
         private System.Windows.Forms.TextBox textBoxPassw;
         private System.Windows.Forms.Button buttonDone;
+        private System.Windows.Forms.NumericUpDown numericUpDownAge;
+        private System.Windows.Forms.Button buttonCancel;
     }
 }

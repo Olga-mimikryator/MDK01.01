@@ -37,5 +37,18 @@ namespace SQLTest
                 pgUsersLoader.ClearUsers();
             }
         }
+
+        private void buttonUserAdd_Click(object sender, EventArgs e)
+        {
+            AddOrEditUser addOrEditUser = new AddOrEditUser();
+            addOrEditUser.Show();
+        }
+
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            AddOrEditUser addOrEditUser = new AddOrEditUser();
+            addOrEditUser.Show();
+            
+        }
     }
 }

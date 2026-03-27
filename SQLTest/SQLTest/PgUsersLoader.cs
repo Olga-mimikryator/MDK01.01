@@ -111,8 +111,12 @@ namespace SQLTest
                 var cs = "Host=192.168.1.48;Username=st56-10;Password=5610;Database=DbforPM_OlgaSafonova";
                 var con = new NpgsqlConnection(cs);
                 con.Open();
-                var sql = @"INSERT INTO users(login, password, age, name) VALUES (@newUser.Login, @newUser.Password, @newUser.Age, @newUser.Name)";
+                var sql = @"INSERT INTO users (login, password, age, name) VALUES (@login, @password, @age, @name)";
                 var cmd = new NpgsqlCommand(sql, con);
+                cmd.Parameters.AddWithValue("@login", newUser.Login);
+                cmd.Parameters.AddWithValue("@password", newUser.Password);
+                cmd.Parameters.AddWithValue("@age", newUser.Age);
+                cmd.Parameters.AddWithValue("@name", newUser.Name);
                 int execute = cmd.ExecuteNonQuery();
                 if (execute > 0)
                 {
@@ -122,6 +126,35 @@ namespace SQLTest
                 return false;
             }
             catch(Exception ex)
+            {
+                MessageBox.Show($"Ошибка: {ex.Message}");
+                return false;
+            }
+        }
+
+        public bool EditUser(string login)
+        {
+            try
+            {
+                bool result = true;
+                var cs = "Host=192.168.1.48;Username=st56-10;Password=5610;Database=DbforPM_OlgaSafonova";
+                var con = new NpgsqlConnection(cs);
+                con.Open();
+                var sql = @"UPDATE users SET password = @password, age = @age, name = @name WHERE login = @login";
+                var cmd = new NpgsqlCommand(sql, con);
+                cmd.Parameters.AddWithValue("@login", login);
+                //cmd.Parameters.AddWithValue("@password", Password);
+                //cmd.Parameters.AddWithValue("@age", Age);
+                //cmd.Parameters.AddWithValue("@name", Name);
+                int execute = cmd.ExecuteNonQuery();
+                if (execute > 0)
+                {
+                    result = true;
+                }
+
+                return false;
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show($"Ошибка: {ex.Message}");
                 return false;
